@@ -5,7 +5,7 @@ node {
   stage('SonarQube Analysis') {
     def mvn = tool 'Default Maven';
     withSonarQubeEnv() {
-      sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=my-local -Dsonar.projectName='my-local'"
+      sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=local-101 -Dsonar.projectName='local-101'"
     }
   }
 }
